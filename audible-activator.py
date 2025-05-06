@@ -10,6 +10,7 @@ import binascii
 import requests
 from getpass import getpass
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from optparse import OptionParser
 
 PY3 = sys.version_info[0] == 3
