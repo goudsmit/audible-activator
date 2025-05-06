@@ -87,9 +87,10 @@ def fetch_activation_bytes(username, password, options):
         else:
             chromedriver_path = "./chromedriver"
 
+	from selenium.webdriver.chrome.service import Service
 
-        driver = webdriver.Chrome(options=opts,
-                                  executable_path=chromedriver_path)
+	service = Service(executable_path="./chromedriver")
+	driver = webdriver.Chrome(service=service, options=opts)
 
     query_string = urlencode(payload)
     url = login_url + query_string
