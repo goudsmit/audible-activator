@@ -33,6 +33,7 @@ def fetch_activation_bytes(username, password, options):
     opts.add_argument('--headless')
     opts.add_argument('--no-sandbox')
     opts.add_argument('--disable-dev-shm-usage')
+    opts.binary_location = "/usr/bin/chromium"
 
     # Step 1
     if '@' in username:  # Amazon login using email address
